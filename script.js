@@ -6,7 +6,7 @@ let nextButton = document.querySelector("#next")
 const url = "https://api.thecatapi.com/v1/images/search";
 
 
-// fetch function 
+// fetch function reuests data from thecatapi.com  
 async function getKitten(){
 
     let response = await fetch(url, {
@@ -20,7 +20,7 @@ async function getKitten(){
 
 // console loggin to check looks like it returns an array of objects 
  console.log(dataObject)
- 
+
 //  accessing first index of the array of objects and replacing our img url with object url 
  catDisplay.src = dataObject[0].url
 }
